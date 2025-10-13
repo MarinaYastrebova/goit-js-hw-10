@@ -1,24 +1,42 @@
+.input-date {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: start;
+  justify-content: start;
+}
 #datetime-picker {
   padding: 5px;
   font-size: 16px;
   border: 1px solid #ccc;
-  margin-top: 20px;
+  left: 0;
+  margin-top: 30px;
 }
+#datetime-picker:hover {
+  border-color: #4e75ff;
+}
+#datetime-picker:focus {
+  border-color: #4e75ff;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.4);
+}
+
 [data-start] {
   padding: 5px;
-  font-style: 16px;
+  font-style: 20px;
   cursor: pointer;
   border: 1px solid #ccc;
   background-color: #f0f0f0;
-  width: 50px;
+  width: 75px;
+  height: 30px;
+  margin-top: 30px;
 }
 
 .timer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  gap: 10px;
   margin-top: 30px;
+  align-items: start;
+  justify-content: start;
 }
 .field {
   display: flex;
