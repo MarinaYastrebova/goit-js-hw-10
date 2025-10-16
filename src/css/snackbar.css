@@ -1,16 +1,15 @@
-/* Основний контейнер форми: забезпечує вертикальне вирівнювання */
 .form {
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
+  max-width: 300px;
   gap: 20px;
-  max-width: 360px;
-  padding: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .form label {
-  display: flex;
-  flex-wrap: wrap;
+  text-align: left;
   font-size: 14px;
   color: #333;
 }
@@ -23,10 +22,8 @@
   border-radius: 4px;
   font-size: 16px;
   box-sizing: border-box;
-  text-align: left;
 }
 
-/* Стилі для групи радіо-кнопок (State) */
 fieldset {
   border: 1px solid #999;
   padding: 10px;
@@ -34,6 +31,7 @@ fieldset {
   margin: 0;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   gap: 15px;
 }
 legend {
@@ -44,29 +42,13 @@ legend {
   text-align: left;
 }
 
-/* Стилі для кожної окремої радіо-мітки */
 fieldset label {
-  display: flex; /* Використовуємо flex, щоб радіо-кнопка та текст були поруч */
-  align-items: center;
   font-size: 16px;
   color: #333;
   cursor: pointer;
-
-  /* Вирівнюємо текст всередині кожного Label по центру */
-  justify-content: center;
-
-  /* Знімаємо display: inline-flex, який може конфліктувати, 
-       оскільки ми вже маємо flex на fieldset. */
+  padding-bottom: 10px;
 }
 
-fieldset input[type='radio'] {
-  margin-right: 5px;
-}
-/* .form input[type='radio'] {
-  display: flex;
-  flex-direction: row;
-} */
-/* Стилі для кнопки */
 .form button[type='submit'] {
   width: 100%;
   padding: 10px;
@@ -77,4 +59,11 @@ fieldset input[type='radio'] {
   cursor: pointer;
   color: #555;
   transition: background-color 0.2s;
+}
+button[type='submit']:hover {
+  background-color: #dcdcdc;
+}
+
+button[type='submit']:active {
+  background-color: #ccc;
 }
